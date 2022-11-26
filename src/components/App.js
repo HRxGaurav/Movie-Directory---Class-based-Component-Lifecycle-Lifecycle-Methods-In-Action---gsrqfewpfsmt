@@ -9,12 +9,15 @@ const App = () => {
   function call(val){
     setVal(val)
   }
+  // console.log(val.length===0)
   
   return (
     <div id="main">
       <h1>Movie List</h1>
       <MoviesList function={call}/>
-      <Movie Movie_director={val.director} Movie_year={val.year}  Movie_title={val.title}/>
+      {
+        val.length===0 ? <div id="movies-banner">Invalid Id</div>: <Movie Movie_director={val.director} Movie_year={val.year}  Movie_title={val.title}/>
+      }
     </div>
   );
 };

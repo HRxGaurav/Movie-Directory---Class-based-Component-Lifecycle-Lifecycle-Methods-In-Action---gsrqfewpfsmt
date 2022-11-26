@@ -24,8 +24,8 @@ class MoviesList extends React.Component {
              
               {moviesList.map((val)=>{
                 return(
-                  <tr id="table-row">
-                <td onClick={()=>this.props.function(val)}>{val.title}</td>
+                  <tr id="table-row" key={val.id}>
+                <td onClick={()=>this.props.function(val)} >{val.title}</td>
                 </tr>
                 )
               })}
