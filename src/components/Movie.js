@@ -7,9 +7,9 @@ class Movie extends React.Component {
     
     return (
       <div id="movie-banner">
-        <h2>Movie title</h2>
-        <h2>Movie year</h2>
-        <h2>Movie director</h2>
+        <h2>{this.props.Movie_title}</h2>
+        <h2>{this.props.Movie_year}</h2>
+        <h2>{this.props.Movie_director}</h2>
       </div>
     );
   }
